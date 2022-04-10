@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.pazar.springsec;
+package com.kodluyoruz.springegitim.altincihafta.cmt.springsec;
 
 public class Test {
 

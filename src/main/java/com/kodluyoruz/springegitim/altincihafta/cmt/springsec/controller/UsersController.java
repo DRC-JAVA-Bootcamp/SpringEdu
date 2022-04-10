@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.pazar.springsec.controller;
+package com.kodluyoruz.springegitim.altincihafta.cmt.springsec.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

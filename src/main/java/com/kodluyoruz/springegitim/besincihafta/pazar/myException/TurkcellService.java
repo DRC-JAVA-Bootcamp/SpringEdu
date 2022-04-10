@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.cmt.myException;
+package com.kodluyoruz.springegitim.besincihafta.pazar.myException;
 
 public class TurkcellService {
 

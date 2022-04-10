@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.pazar.resttemplate;
+package com.kodluyoruz.springegitim.altincihafta.cmt.resttemplate;
 
 import org.springframework.stereotype.Service;
 

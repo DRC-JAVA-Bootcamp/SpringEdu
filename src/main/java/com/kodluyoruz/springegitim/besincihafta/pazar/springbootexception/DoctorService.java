@@ -1,7 +1,7 @@
-package com.kodluyoruz.springegitim.besincihafta.cmt.springbootexception;
+package com.kodluyoruz.springegitim.besincihafta.pazar.springbootexception;
 
-import com.kodluyoruz.springegitim.besincihafta.cmt.myException.BusinessException;
-import com.kodluyoruz.springegitim.besincihafta.cmt.myException.Doctor;
+import com.kodluyoruz.springegitim.besincihafta.pazar.myException.BusinessException;
+import com.kodluyoruz.springegitim.besincihafta.pazar.myException.Doctor;
 import org.springframework.stereotype.Service;
 
 @Service("drService")

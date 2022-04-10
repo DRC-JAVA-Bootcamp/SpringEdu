@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.cmt.exceptionhandling;
+package com.kodluyoruz.springegitim.besincihafta.pazar.exceptionhandling;
 
 import com.kodluyoruz.springegitim.dorduncuhafta.cmt.genelbakis.annotations.Ogrenci;
 

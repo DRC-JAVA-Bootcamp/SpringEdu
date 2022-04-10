@@ -1,6 +1,6 @@
-package com.kodluyoruz.springegitim.besincihafta.cmt.myException;
+package com.kodluyoruz.springegitim.besincihafta.pazar.myException;
 
-import com.kodluyoruz.springegitim.besincihafta.cmt.springbootexception.DoctorService;
+import com.kodluyoruz.springegitim.besincihafta.pazar.springbootexception.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;

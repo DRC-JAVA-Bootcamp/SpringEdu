@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.cmt.exceptionhandling;
+package com.kodluyoruz.springegitim.besincihafta.pazar.exceptionhandling;
 
 
 import java.io.BufferedReader;

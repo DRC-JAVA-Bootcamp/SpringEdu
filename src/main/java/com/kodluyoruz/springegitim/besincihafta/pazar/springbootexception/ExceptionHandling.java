@@ -1,7 +1,7 @@
-package com.kodluyoruz.springegitim.besincihafta.cmt.springbootexception;
+package com.kodluyoruz.springegitim.besincihafta.pazar.springbootexception;
 
 
-import com.kodluyoruz.springegitim.besincihafta.cmt.myException.BusinessException;
+import com.kodluyoruz.springegitim.besincihafta.pazar.myException.BusinessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

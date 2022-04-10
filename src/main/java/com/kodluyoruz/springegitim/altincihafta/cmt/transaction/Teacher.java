@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.pazar.transaction;
+package com.kodluyoruz.springegitim.altincihafta.cmt.transaction;
 
 import javax.persistence.*;
 

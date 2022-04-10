@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.pazar.springsec.ConfigSecurity;
+package com.kodluyoruz.springegitim.altincihafta.cmt.springsec.ConfigSecurity;
 
 //import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

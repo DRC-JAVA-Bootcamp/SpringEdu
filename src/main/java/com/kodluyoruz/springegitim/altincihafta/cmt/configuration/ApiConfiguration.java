@@ -1,4 +1,4 @@
-package com.kodluyoruz.springegitim.besincihafta.pazar.configuration;
+package com.kodluyoruz.springegitim.altincihafta.cmt.configuration;
 
 
 import org.springframework.context.annotation.Bean;
