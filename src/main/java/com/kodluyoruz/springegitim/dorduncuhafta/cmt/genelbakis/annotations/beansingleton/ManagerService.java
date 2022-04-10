@@ -2,8 +2,9 @@ package com.kodluyoruz.springegitim.dorduncuhafta.cmt.genelbakis.annotations.bea
 
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class ManagerService {
 
     private final EmployeeService employeeService;

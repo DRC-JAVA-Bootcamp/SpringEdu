@@ -1,1 +1,4 @@
+tutorial/coordinator/UserCoordinatorUnitTest.class
+tutorial/controller/UserControllerIntegrationTest.class
+tutorial/TestTutorialApplicationTests.class
 com/kodluyoruz/springegitim/SpringegitimApplicationTests.class

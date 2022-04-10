@@ -5,19 +5,20 @@ import com.kodluyoruz.springegitim.dorduncuhafta.cmt.genelbakis.packageyapisi.se
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/adress")
+@RequestMapping("/api/student")
 public class AdressController {
-//www.google.com/student/getStudentsList
+//https://www.google.com/api/student/getStudentAdressList
     @Autowired
     StudenttService studentService;
 
-    @GetMapping("/getStudentAdressList")
-    public List<Student> getStudentAdressList(){
+    @GetMapping("/getStudentList")
+    public List<Student> getStudentList(){
         return null;
 
     }

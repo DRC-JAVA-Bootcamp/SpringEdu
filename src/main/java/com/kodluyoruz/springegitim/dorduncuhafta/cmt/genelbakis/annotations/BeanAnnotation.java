@@ -10,7 +10,7 @@ public class BeanAnnotation {
 
     //methodlar bean annotation ile işaretlenir. Classın da bir spring beanı olması gerekir.
     @Bean
-   // @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+//    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public Ogrenci getOgrenci(){
         return new Ogrenci();
     }

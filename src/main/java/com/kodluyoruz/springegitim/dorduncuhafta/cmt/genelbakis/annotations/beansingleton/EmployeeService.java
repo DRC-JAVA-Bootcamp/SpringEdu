@@ -3,6 +3,7 @@ package com.kodluyoruz.springegitim.dorduncuhafta.cmt.genelbakis.annotations.bea
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
