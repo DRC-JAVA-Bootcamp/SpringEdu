@@ -16,12 +16,17 @@ public class UsersController {
 
         return "Home page";
 
-
     }
 
     @GetMapping("/dashboard")
     public String dashboard(){
         return "Login başarılı";
+    }
+
+
+    @GetMapping("/addUser")
+    public String addUser(){
+        return "Admine özel user ekleme sayfası";
     }
 
 

@@ -6,6 +6,4 @@ values(123, 'Nesrin');
 
 insert into student
 values(8754, 'Nesrin');
-
-insert into student
-values(112,'Burak');
+;

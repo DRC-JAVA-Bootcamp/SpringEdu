@@ -1,11 +1,11 @@
 package tutorial.coordinator;
 
-import com.kodluyoruz.springegitim.besincihafta.cmt.testkavrami.dto.UserSaveRequestDto;
-import com.kodluyoruz.springegitim.besincihafta.cmt.testkavrami.model.User;
-import com.kodluyoruz.springegitim.besincihafta.cmt.testkavrami.repository.UserRepository;
-import com.kodluyoruz.springegitim.besincihafta.cmt.testkavrami.service.NonTurkcellInfoService;
-import com.kodluyoruz.springegitim.besincihafta.cmt.testkavrami.service.UserService;
-import com.kodluyoruz.springegitim.besincihafta.cmt.testkavrami.service.UserTurkcellService;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.dto.UserSaveRequestDto;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.model.User;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.repository.UserRepository;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.service.NonTurkcellInfoService;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.service.UserService;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.service.UserTurkcellService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -12,6 +12,12 @@ public class Teacher {
     @Column
     private String name;
 
+    @Column
+    private String lastName;
+
+    @Column
+    private String department;
+
     public int getId() {
         return id;
     }
@@ -26,5 +32,21 @@ public class Teacher {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }
