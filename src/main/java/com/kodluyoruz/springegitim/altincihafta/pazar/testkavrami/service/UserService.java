@@ -1,16 +1,17 @@
 package com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.service;
 
-import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.model.User;
-import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.dto.UserSaveRequestDto;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.model.Userr;
+import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.dto.UserSaveRequestDtoo;
 import com.kodluyoruz.springegitim.altincihafta.pazar.testkavrami.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
 
     @Autowired
-    UserRepository userRepository;
+    UserRepository userRepositories;
 
     @Autowired
     UserTurkcellService userTurkcellService;
@@ -18,16 +19,16 @@ public class UserService {
     @Autowired
     NonTurkcellInfoService nonTurkcellInfoService;
 
-    public boolean userSaveByRequestDto(UserSaveRequestDto userSaveRequestDto) {
-        System.out.println("UserCoordinator -> userSaveByRequestDto method");
-        String msisdn = userSaveRequestDto.getMsisdn();
-        if (!checkMsisdnFormat(msisdn)) {
+    public boolean userSaveByRequestDto(UserSaveRequestDtoo userSaveRequestDto) {
+        String phoneNumber = userSaveRequestDto.getPhoneNumber();
+        if (!checkPhoneNumberFormat(phoneNumber)) {
             return false;
         }
         try {
-            boolean isTurkcell = isTurkcell(msisdn);
-            User user = null;
-            user = userRepository.userSave(userSaveRequestDto);
+            boolean isTurkcell = isTurkcell(phoneNumber);
+            Userr user = null;
+            user = userRepositories.userSave(userSaveRequestDto);
+
             if (!isTurkcell) {
                 nonTurkcellInfoService.nonTurkcellInfoService(user);
             }
@@ -38,34 +39,37 @@ public class UserService {
         }
     }
 
-    public boolean checkMsisdnFormat(String msisdn) {
-        if (msisdn == null) {
+    public boolean checkPhoneNumberFormat(String phoneNumber) {
+        if (phoneNumber == null) {
             return false;
         }
-        if (!org.apache.commons.lang3.StringUtils.isNumeric(msisdn)) {
+        if (!org.apache.commons.lang3.StringUtils.isNumeric(phoneNumber)) {
             return false;
         }
-        if (msisdn.trim().length() == 0) {
+        if (phoneNumber.trim().length() == 0) {
             return false;
         }
-        if (msisdn.length() == 10 && msisdn.startsWith("0")) {
+        if (phoneNumber.length() == 10 && phoneNumber.startsWith("0")) {
             return false;
         }
-        if (msisdn.length() == 11 && !msisdn.startsWith("0")) {
+        if (phoneNumber.length() == 11 && !phoneNumber.startsWith("0")) {
             return false;
         }
-        if (msisdn.length() != 11 && msisdn.length() != 10) {
+        if (phoneNumber.length() != 11 && phoneNumber.length() != 10) {
             return false;
         }
         return true;
     }
 
-    public boolean isTurkcell(String msisdn) {
+    public boolean isTurkcell(String phoneNumber) {
         boolean turkcell = false;
 
-        User user = userTurkcellService.getUserByMsisdn(msisdn);
+        Userr user = userTurkcellService.getUserByMsisdn(phoneNumber);
         if (user.getTurkcell()) { // null kontrolü yapılmadığı için isTurkcell null gelirse null pointer exception fırlatır, unit test yazarken farkedilebilir, düzeltelim mi yoksa örnek olması açısından böyle mi kalsın?
             turkcell = true;
+
+        }else{
+            nonTurkcellInfoService.nonTurkcellInfoService(user);
         }
 
         return turkcell;

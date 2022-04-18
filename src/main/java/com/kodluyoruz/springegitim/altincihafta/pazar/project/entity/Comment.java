@@ -17,7 +17,7 @@ public class Comment {
     @JoinColumn(name = "customerId")
     private Customer customer;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "productId")
     private Product product;
 

@@ -1,10 +1,11 @@
 package com.kodluyoruz.springegitim.altincihafta.cmt.resttemplate.get;
 
 
+import org.springframework.http.ResponseEntity;
+
 public interface ApiService {
 
-
-    public Response verifyPhoneNumber(String number);
+    public ResponseEntity<ResponseInfoPhoneNumber> verifyPhoneNumber(String number);
 
 
 }
