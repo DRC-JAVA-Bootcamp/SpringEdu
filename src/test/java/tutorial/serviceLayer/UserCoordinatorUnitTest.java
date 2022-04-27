@@ -61,6 +61,18 @@ class UserCoordinatorUnitTest {
     }
 
     @Test
+    void testIsTurkcellWithTurkcellMsisdn2(){
+        //String msisdn = "5554443322";
+
+        Userr userMock = getMockUser("5554443322", true);
+        when(userTurkcellService.getUserByMsisdn(Mockito.anyString())).thenReturn(userMock);
+
+        boolean result = userService.isTurkcell(userMock.getMsisdn());
+        Assertions.assertTrue(result);
+    }
+
+
+    @Test
     void testIsTurkcellWithoutTurkcellMsisdn(){
 
         Userr userMock = getMockUser("5554443322",false);
@@ -86,6 +98,23 @@ class UserCoordinatorUnitTest {
 
     @Test
     void testPhoneNumberSizeNonValidate(){
+        String msisdn = "0005554443322";
+        boolean result = userService.checkPhoneNumberFormat(msisdn);
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    void testPhoneNumberSizeNonValidate444(){
+        String msisdn = "0005554443322";
+        boolean result = userService.checkPhoneNumberFormat(msisdn);
+        Assertions.assertFalse(result);
+    }
+
+
+
+
+    @Test
+    void testPhoneNumberSizeNonValidate44(){
         String msisdn = "0005554443322";
         boolean result = userService.checkPhoneNumberFormat(msisdn);
         Assertions.assertFalse(result);
