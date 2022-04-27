@@ -156,3 +156,9 @@ fsrc/main/java/com/kodluyoruz/springegitim/besincihafta/pazar/exceptionhandling/
 esrc/main/java/com/kodluyoruz/springegitim/besincihafta/pazar/exceptionhandling/ExceptionHandling.java,e/0/e0e70e4385853da3336994b4ad0ac45ee94ea874
 —
 gsrc/main/java/com/kodluyoruz/springegitim/altincihafta/cmt/springsec/ConfigSecurity/SecuritySpring.java,4/d/4ddeaac8032936d603e2c61db2d8ce04d60fbfa7
+–
+fsrc/main/java/com/kodluyoruz/springegitim/altincihafta/pazar/project/controller/CommentController.java,2/4/2433673b218db944e82a8ecb274c523882f33408
+
+Osrc/main/java/com/kodluyoruz/springegitim/Springjdbch2educationApplication.java,1/d/1d35e6a27bdab8de262f19af1944a5bc19497366
+–
+fsrc/main/java/com/kodluyoruz/springegitim/altincihafta/pazar/project/controller/ProductController.java,b/4/b4f58573133214a9a05feadc64a1f9cf03e9ab97

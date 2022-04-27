@@ -15,7 +15,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class UserCoordinatorUnitTest {
@@ -58,6 +59,18 @@ class UserCoordinatorUnitTest {
         boolean result = userService.isTurkcell(userMock.getMsisdn());
         Assertions.assertTrue(result);
     }
+
+    @Test
+    void testIsTurkcellWithTurkcellMsisdn2(){
+        //String msisdn = "5554443322";
+
+        Userr userMock = getMockUser("5554443322", true);
+        when(userTurkcellService.getUserByMsisdn(Mockito.anyString())).thenReturn(userMock);
+
+        boolean result = userService.isTurkcell(userMock.getMsisdn());
+        Assertions.assertTrue(result);
+    }
+
 
     @Test
     void testIsTurkcellWithoutTurkcellMsisdn(){
