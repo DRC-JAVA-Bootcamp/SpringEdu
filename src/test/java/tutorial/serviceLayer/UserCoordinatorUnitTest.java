@@ -15,7 +15,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class UserCoordinatorUnitTest {
@@ -71,6 +72,13 @@ class UserCoordinatorUnitTest {
 
     @Test
     void testPhoneNumberValidate(){
+        String msisdn = "5554443322";
+        boolean result = userService.checkPhoneNumberFormat(msisdn);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    void testPhoneNumberValidate2(){
         String msisdn = "5554443322";
         boolean result = userService.checkPhoneNumberFormat(msisdn);
         Assertions.assertTrue(result);
