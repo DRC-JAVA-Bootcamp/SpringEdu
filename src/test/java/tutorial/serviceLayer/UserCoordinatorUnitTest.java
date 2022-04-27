@@ -103,6 +103,15 @@ class UserCoordinatorUnitTest {
         Assertions.assertFalse(result);
     }
 
+    @Test
+    void testPhoneNumberSizeNonValidate444(){
+        String msisdn = "0005554443322";
+        boolean result = userService.checkPhoneNumberFormat(msisdn);
+        Assertions.assertFalse(result);
+    }
+
+
+
 
     @Test
     void testPhoneNumberSizeNonValidate44(){
