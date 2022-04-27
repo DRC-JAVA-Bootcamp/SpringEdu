@@ -9,8 +9,10 @@ public class GenerelConfig {
 
     @Bean
     public ModelMapper modelMapper(){
+        System.out.println();
         return new ModelMapper();
     }
+
 
 
 }
