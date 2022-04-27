@@ -26,6 +26,7 @@ class UserControllerIntegrationTest {
 	@BeforeEach
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context).build();
+		System.out.println("efe");
 	}
 
 	@Test
