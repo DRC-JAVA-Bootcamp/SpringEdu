@@ -104,6 +104,14 @@ class UserCoordinatorUnitTest {
     }
 
 
+    @Test
+    void testPhoneNumberSizeNonValidate44(){
+        String msisdn = "0005554443322";
+        boolean result = userService.checkPhoneNumberFormat(msisdn);
+        Assertions.assertFalse(result);
+    }
+
+
     private Userr getMockUser(String msisdn, Boolean isTurkcell) {
         Userr user = mock(Userr.class);
         when(user.getMsisdn()).thenReturn(msisdn);
