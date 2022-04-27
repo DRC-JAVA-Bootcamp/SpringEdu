@@ -90,6 +90,13 @@ class UserCoordinatorUnitTest {
     }
 
     @Test
+    void testPhoneNumberValidate2(){
+        String msisdn = "5554443322";
+        boolean result = userService.checkPhoneNumberFormat(msisdn);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
     void testPhoneNumberSizeNonValidate(){
         String msisdn = "0005554443322";
         boolean result = userService.checkPhoneNumberFormat(msisdn);
