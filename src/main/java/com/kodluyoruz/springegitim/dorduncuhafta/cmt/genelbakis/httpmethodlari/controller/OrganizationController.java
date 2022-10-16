@@ -5,7 +5,11 @@ import com.kodluyoruz.springegitim.dorduncuhafta.cmt.genelbakis.httpmethodlari.m
 import com.kodluyoruz.springegitim.dorduncuhafta.cmt.genelbakis.httpmethodlari.servis.OrganizationService;
 import com.kodluyoruz.springegitim.dorduncuhafta.cmt.genelbakis.httpmethodlari.model.Organization;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/organization")
@@ -13,16 +17,30 @@ public class OrganizationController {
 
     @Autowired
     OrganizationService organizationService;
+    @GetMapping(value = "/allOrganization")
+    public List<Organization> allOrganizaton(){
+        List<Organization> organizations = organizationService.allOrganization();
+        return organizations;
+    }
 
-    @GetMapping("/getOrganization")
-    public Organization getOrganization(@RequestParam(value = "orgId", required = false) int organizationId){
-        return organizationService.getOrganization(organizationId);
-
+    @GetMapping("/organizationDetail")
+    public ResponseEntity<Organization> getOrganization(@RequestParam int idOrganization){
+        Organization organizationById = organizationService.getOrganizationById(idOrganization);
+        if(organizationById == null){
+            return new ResponseEntity<>(organizationById, HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(organizationById, HttpStatus.OK);
     }
 
     @PostMapping("/saveOrganization")
-    public boolean saveOrganization(@RequestBody OrganizationSaveRequestDto organizationSaveRequestBody){
-        return organizationService.saveOrganization(organizationSaveRequestBody);
+    public void saveOrganization(@RequestBody OrganizationSaveRequestDto organizationSaveRequestDto){
+        organizationService.saveOrganization(organizationSaveRequestDto);
+
+    }
+
+    @PostMapping("/saveOrganization2")
+    public void saveOrganization2(@RequestBody OrganizationSaveRequestDto organizationSaveRequestDto){
+        organizationService.saveOrganization(organizationSaveRequestDto);
 
     }
 
